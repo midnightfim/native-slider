@@ -7,9 +7,17 @@
   background: lightskyblue;
   height: inherit;
   white-space: nowrap;
-  overflow-y: hidden;
   display: flex;
+  position: relative;
   scroll-behavior: smooth;
+}
+
+.desktop-slider-container {
+  overflow: hidden;
+}
+
+.mobile-slider-container {
+  overflow-x: scroll;
 }
 
 .slider-container::-webkit-scrollbar {
@@ -34,4 +42,37 @@
   &:last-child {
     margin-right: 0;
   }
+}
+
+.arrow {
+  position: absolute;
+  top: 230px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px seagreen solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1;
+  background: tomato;
+}
+
+.left-arrow {
+  left: 5%;
+}
+
+.right-arrow {
+  right: 5%;
+}
+
+.unselectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
